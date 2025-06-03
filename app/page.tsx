@@ -11,7 +11,7 @@ export default function HomePage() {
         className="relative h-[90vh] flex flex-col justify-center text-white px-6 overflow-hidden"
       >
         <Image
-          src="/images/erin-image.png"
+          src="/images/crowd.webp"
           alt="Erin Leonty keynote speaker background"
           fill
           className="object-cover -z-10"
