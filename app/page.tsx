@@ -5,10 +5,10 @@ import StaggerButton from './components/StaggerButton';
 
 export default function HomePage() {
   return (
-<main className="space-y-24">
+<div className="space-y-24">
       {/* ───────────────────── HERO ───────────────────── */}
       <section
-        className="relative h-[90vh] flex flex-col justify-center text-white px-6 overflow-hidden"
+        className="relative h-[90vh] flex flex-col justify-center text-white px-6 overflow-hidden mt-0 sm:mt-[-127px]"
       >
         <Image
           src="/images/crowd.webp"
@@ -20,7 +20,7 @@ export default function HomePage() {
         {/* Overlay to darken the image slightly for better text contrast */}
         <div className="absolute inset-0 bg-black opacity-30 -z-10"></div>
         {/* Content container with relative positioning and higher z-index */}
-        <div className="relative z-10 max-w-[1280px] mx-auto grid grid-cols-12 gap-5">
+        <div className="relative z-10 max-w-[1280px] mx-auto grid grid-cols-12 gap-5 pt-0 sm:pt-[127px]">
           <div className="col-span-6 col-start-1 flex flex-col items-start">
             <h1 className="home-lede text-white mb-7 leading-[.9] ml-[-32px]">
               Ignite your pride
@@ -146,6 +146,6 @@ export default function HomePage() {
     </section>
 
       {/* ───────────── TESTIMONIAL ───────────── */}
- </main>
+ </div>
   );
 }

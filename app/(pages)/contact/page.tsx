@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <main className="container mx-auto px-6 py-16 space-y-20">
+    <div className="container mx-auto px-6 py-16 space-y-20">
       {/* ───────────── PAGE TITLE ───────────── */}
       <section className="fadeSection text-center">
         <h1 className="text-4xl font-bold mb-4">Book Erin Leonty | Contact Leonty Consulting</h1>
@@ -39,7 +39,7 @@ export default function ContactPage() {
   She&apos;s available for keynotes, workshops, and executive consulting.
 </p>
       </section>
-    </main>
+    </div>
   );
 }
 

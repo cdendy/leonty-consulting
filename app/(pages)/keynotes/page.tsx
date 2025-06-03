@@ -29,7 +29,7 @@ const topics = [
 
 export default function KeynotesPage() {
   return (
-    <main className="container mx-auto px-6 py-16 space-y-20">
+    <div className="container mx-auto px-6 py-16 space-y-20">
     {/* ───────────── INTRO ───────────── */}
     <section className="fadeSection text-center max-w-3xl mx-auto">
       <h1 className="mb-4 home-lede">Creating Lasting Change Through Authentic Leadership</h1>
@@ -82,7 +82,7 @@ export default function KeynotesPage() {
         Contact Us to Reserve Your Date
       </Link>
     </section>
-  </main>
+  </div>
   );
 }
 
