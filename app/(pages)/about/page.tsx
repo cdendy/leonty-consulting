@@ -18,15 +18,15 @@ export default function HomePage() {
           priority
         />
         {/* Overlay to darken the image slightly for better text contrast */}
-        <div className="absolute inset-0 bg-black opacity-30 -z-10"></div>
+        <div className="absolute inset-0 bg-black opacity-50 -z-10"></div>
         {/* Content container with relative positioning and higher z-index */}
         <div className="relative z-10 max-w-[1280px] mx-auto grid grid-cols-12 gap-5 pt-0 sm:pt-[127px]">
-          <div className="col-span-10 col-start-1 flex flex-col items-start">
+          <div className="col-span-10 col-start-2 flex flex-col items-start">
             <h1 className="home-lede text-white mb-7 leading-[.9] text-[90px]">
-            Transforming Organizations Through Authentic Leadership
+            Transforming Leaders Who Transform Organizations
             </h1>
             <p className="mt-4 text-lg md:text-2xl text-white">
-            Helping ambitious leaders create high-performing cultures that deliver measurable results while staying true to their strengths. For Western Canadian business leaders seeking sustainable transformation that bridges strategic excellence with genuine human connection.
+            Erin Leonty helps established leaders evolve their influence without sacrificing the operational excellence that built their success. From traditional industrial companies to fast-growing tech startups, she creates breakthrough moments that shift how entire organizations think about performance, culture, and competitive advantage.
             </p>
             <div className="mt-8 space-x-4">
             </div>
@@ -36,83 +36,62 @@ export default function HomePage() {
 
       {/* ───────────── ABOUT PREVIEW ───────────── */}
       <section className="fadeSection px-6 mx-auto max-w-340 grid grid-cols-12 gap-5 mb-36">
-    <div className="col-span-6 col-start-1">
+    <div className="col-span-10 col-start-2 mb-20">
       <p className="section-eyebrow">About</p>
       <h2 className="section-heading mt-2 mb-8">
-        Transformative leadership that creates lasting impact
+      From Finance Executive to Transformation Leader: The Authentic Path to Sustainable High Performance
       </h2>
-      <p className="text-gray-700">
-        Based in Edmonton, Alberta, Erin Leonty is a sought-after keynote speaker and workplace culture
-        expert who helps organizations across Western Canada create cultures where everyone can thrive.
-        As a leading diversity and inclusion speaker in Canada, Erin bridges the gap between intention
-        and impact through authentic leadership development.
+      <p className="text-gray-700 text-2xl">
+      Erin Leonty transformed her own career trajectory—and then did the same for organizations. Starting in finance as the &quot;only woman in the room,&quot; she learned firsthand how to navigate traditional business environments while staying true to her values. That experience became her foundation for driving inclusion work at companies like Finning International—proving her approach works even in the toughest, most skeptical environments. Later, as VP of Social Purpose at tech company Clio, she achieved what most leaders think is impossible: 31% increase in women&apos;s leadership representation while driving employee engagement up 6x. Her secret? Discovering that authenticity isn&apos;t the opposite of performance—it&apos;s what unlocks it.
       </p>
-      <a href="/about" className="mt-4 inline-block text-black underline">
-        Learn More About Erin →
-      </a>
-
+      <p className="text-gray-700 mt-10 text-l">
+      Most change initiatives fail because leaders try to fix culture with strategy alone. Erin addresses the real challenge: helping established leaders evolve their influence without losing the operational excellence that built their success. When she takes the stage, audiences don&apos;t just learn new concepts—they experience breakthrough moments that shift how they see leadership itself.
+      </p>
+    </div>
+    <div className="col-span-10 col-start-2 mb-20">
+      <p className="section-eyebrow">THE DIFFERENCE</p>
+      <h2 className="section-heading mt-2 mb-8">
+      What Sets Erin Apart
+      </h2>
       <h3 className="mt-10 text-[20px] font-bold leading-[28px] text-[#181D27]">
-        Strategic transformation expertise
+      Lived the Transformation
       </h3>
       <p className="mt-2 text-[18px] leading-[28px] text-[#4B5057]">
-        Drawing from her success at companies like Clio, where she increased women&apos;s leadership representation by 31%, Erin brings pragmatic approaches that deliver quantifiable business results through people-first strategies.
+      Born in Edmonton, first in her family to earn a university degree, Erin built her expertise by navigating her own evolution from &quot;only woman in the room&quot; in finance to executive leadership in tech. She doesn&apos;t just teach transformation—she&apos;s lived it.
       </p>
 
       {/* Second item */}
       <h3 className="mt-8 text-[20px] font-bold leading-[28px] text-[#181D27]">
-        Authentic leadership presence
+      Proven in Tough Environments
       </h3>
       <p className="mt-2 text-[18px] leading-[28px] text-[#4B5057]">
-        Erin creates safe environments where leaders can navigate complex challenges with confidence. Her approach balances strategic excellence with genuine connection, fostering cultures where everyone can contribute their talents.
+      While most change experts work with progressive tech companies, Erin proved her approach in traditional industrial settings where skepticism runs high and change is hardest. Her track record includes driving meaningful results in environments others avoid.
       </p>
 
       {/* Third item */}
       <h3 className="mt-8 text-[20px] font-bold leading-[28px] text-[#181D27]">
-        Bridge-building approach
+      Business-Proven Results
       </h3>
       <p className="mt-2 text-[18px] leading-[28px] text-[#4B5057]">
-        Whether working with C-suite executives or facilitating team workshops, Erin helps organizations bridge intention and impact. She transforms workplace cultures by connecting business performance with human potential.
+      Her work drives measurable outcomes: improved retention, accelerated growth, enhanced team performance. Because sustainable change isn&apos;t about inspiration—it&apos;s about giving leaders practical tools that integrate with how businesses actually operate.
+      </p>
+
+       {/* Fourth item */}
+      <h3 className="mt-8 text-[20px] font-bold leading-[28px] text-[#181D27]">
+      Bridge-Builder by Nature
+      </h3>
+      <p className="mt-2 text-[18px] leading-[28px] text-[#4B5057]">
+      Whether connecting traditional industries with modern workplace expectations or helping tech companies scale without losing their culture, Erin helps organizations navigate complexity while preserving what makes them successful.
+      </p>
+      {/* Fifth item */}
+      <h3 className="mt-8 text-[20px] font-bold leading-[28px] text-[#181D27]">
+      Western Canadian Perspective
+      </h3>
+      <p className="mt-2 text-[18px] leading-[28px] text-[#4B5057]">
+      Based in Edmonton with deep roots in Western Canadian business culture, Erin understands the unique dynamics of regional leadership—from family-owned industrial companies to fast-growing tech startups—and how to drive change that fits the local context.
       </p>
     </div>
-    <div className="mt-8 md:mt-0 h-100% bg-gray-200 rounded col-span-6 col-start-7" />
-    {/* img placeholder above */}
   </section>
-
-      {/* ───────────── FEATURED TOPICS ───────────── */}
-    <section className="fadeSection px-6 mx-auto max-w-340 grid grid-cols-12 gap-5 mb-36">
-    <p className="section-eyebrow">Speaking</p>
-      <h2 className="section-heading mt-2 mb-8 col-span-12">
-        Keynotes and workshops <br /> that transform, energize, <br />  and empower.
-      </h2>
-      <div className="col-span-6 col-start-1">
-      <p className='mb-8'>
-        Erin&apos;s executive leadership programs are the perfect blend of strategic excellence and authentic transformation. Each presentation is powered by extensive corporate experience and proven methodologies for sustainable high performance.
-      </p>
-      <p>
-      Her objective is simple: help you elevate your leadership by building environments where both results and relationships flourish, using practical frameworks that drive measurable business outcomes while fostering genuine organizational evolution.
-      </p>
-      </div>
-      <div className="col-span-6 col-start-7">
-        <ul className="list-none p-0 m-0 space-y-0 max-w-2xl mx-auto text-gray-700">
-            <li className="home-page-keynotes">
-            From Awareness to Action: How to Be an Ally in a Polarized World
-            <Image src="/images/arrow_right_blue.svg" alt="" width={20} height={20} className="w-5 h-5" />
-            </li>
-            <li className="home-page-keynotes">
-            From Burnout to Belonging: Tapping Into Your Power for Good
-            <Image src="/images/arrow_right_blue.svg" alt="" width={20} height={20} className="w-5 h-5" />
-            </li>
-            <li className="home-page-keynotes">
-            From Grip to Great: Letting Go to Find Your Flow
-            <Image src="/images/arrow_right_blue.svg" alt="" width={20} height={20} className="w-5 h-5" />
-            </li>
-            <li className="home-page-keynotes mt-[0]">
-            Sovereign Service: Rethinking the Idea of &apos;Service Above Self&apos;
-            <Image src="/images/arrow_right_blue.svg" alt="" width={20} height={20} className="w-5 h-5" />
-            </li>
-        </ul>
-      </div>
-    </section>
 
       {/* ───────────── TESTIMONIAL ───────────── */}
  </div>

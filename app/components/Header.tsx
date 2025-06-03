@@ -32,7 +32,7 @@ export default function Header() {
     <header className="sticky top-0 z-50" style={{ background: 'transparent', boxShadow: 'none' }}>
       <div className="hidden sm:block h-10" /> {/* Spacer for 40px transparent gap, only on sm+ screens */}
       <div
-        className="container mx-auto px-6 py-4 flex justify-between items-center bg-white rounded-[20px]"
+        className="container mx-auto px-6 py-4 flex justify-between items-center bg-white"
         style={{ boxShadow: '0px 4px 11.8px 0px rgba(0, 0, 0, 0.08)' }}
       >
         <Link href="/" aria-label="Leonty Consulting" className="flex items-center">
