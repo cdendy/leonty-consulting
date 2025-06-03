@@ -1,13 +1,14 @@
-"use client"; // ← ensure this is at the very top
+// app/components/StaggerButton.tsx
+'use client'; // ← keep this at the very top
 
-import { useEffect, useRef } from 'react';
+import { ReactNode, useEffect, useRef } from 'react';
 
 interface StaggerButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  /** The raw string for each letter to stagger */
-  children: string;
+  /** The contents of the button (string or JSX) */
+  children: ReactNode;
 
   /** Optional icon (e.g. <img src="…" /> or an <svg />) */
-  icon?: React.ReactNode;
+  icon?: ReactNode;
 
   /** Extra Tailwind classes you want appended */
   className?: string;
@@ -38,10 +39,12 @@ export default function StaggerButton({
     if (!el) return;
 
     const offsetIncrement = 0.01;
-    const text = el.textContent || '';
+    // Extract the raw text content (ignores any nested JSX/icons),
+    // then clear it to rebuild with staggered <span>s.
+    const rawText = el.textContent || '';
     el.textContent = '';
 
-    Array.from(text).forEach((char, index) => {
+    Array.from(rawText).forEach((char, index) => {
       const span = document.createElement('span');
       span.textContent = char;
       span.style.transitionDelay = `${index * offsetIncrement}s`;
@@ -65,7 +68,11 @@ export default function StaggerButton({
       <span data-button-animate-chars ref={textRef}>
         {children}
       </span>
-      {icon && <span className="ml-2 flex-shrink-0">{icon}</span>}
+      {icon && (
+        <span className="ml-[16px] flex-shrink-0">
+          {icon}
+        </span>
+      )}
     </button>
   );
 }
