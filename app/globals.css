@@ -1,42 +1,228 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@import "tailwindcss";
 
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --tw-font-size-base: 16px; /* Mobile first */
+
+    @font-face {
+      font-family: 'PolySans-Neutral';
+      src: url('/fonts/polysans/PolySans-Neutral.woff2') format('woff2');
+      font-style: normal;
+      font-display: swap;
+    }
+    
+    @font-face {
+      font-family: 'PolySans-Median';
+      src: url('/fonts/polysans/PolySans-Median.woff2') format('woff2');
+      font-style: normal;
+      font-display: swap;
+    }
+    
+    @font-face {
+      font-family: 'PolySans-Bulky';
+      src: url('/fonts/polysans/PolySans-Bulky.woff2') format('woff2');
+      font-style: normal;
+      font-display: swap;
+    }
+    
+    @font-face {
+      font-family: 'CircularStd-Medium';
+      src: url('/fonts/circular/CircularStd-Medium.woff2') format('woff2');
+      font-style: normal;
+      font-display: swap;
+    }
+    
+    @font-face {
+      font-family: 'CircularStd-Bold';
+      src: url('/fonts/circular/CircularStd-Bold.woff2') format('woff2');
+      font-style: normal;
+      font-display: swap;
+    }
+
+    .home-lede {
+      color: #8e3030;
+      font-family: 'PolySans-Neutral';
+      font-size: 134px;
+      font-style: normal;
+      line-height: 150px; /* 111.94% */
+    }
+    .subscribe_header {
+      font-family: PolySans-Neutral;
+    }
+
+  }
+
+  @media (min-width: 1024px) {
+    :root {
+      --tw-font-size-base: 20px; /* Desktop breakpoint (Tailwind 'lg') */
+    }
+  }
+
+  body {
+    font-size: var(--tw-font-size-base);
   }
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+@layer components {
+  .btn-skeuo {
+    @apply inline-block px-[24px] py-[12px] text-black text-base text-[20px] font-bold rounded-[39px] border-[2px];
+    background: #F3CF4E;
+    border-color: rgba(255, 255, 255, 0.12);
+    box-shadow:
+      inset 0 0 0 1px rgba(10, 13, 18, 0.18),
+      inset 0 -2px 0 rgba(10, 13, 18, 0.05),
+      0 1px 2px rgba(10, 13, 18, 0.05);
+  }
+
+  .btn-watch-erin {
+    @apply inline-flex items-center rounded-[31px] border border-[#D5D7DA] bg-white px-[18px] py-[12px] text-[#0A0D12] text-[20px] font-bold leading-[30px];
+    box-shadow:
+      inset 0 0 0 1px rgba(10, 13, 18, 0.18),
+      inset 0 -2px 0 rgba(10, 13, 18, 0.05),
+      0 1px 2px rgba(10, 13, 18, 0.05);
+  }
+
+  .btn-watch-erin-icon {
+    @apply w-[24px] h-[24px] ml-[6px];
+  }
+
+    /* — The base “StaggerButton” styles: — */
+  /* AFTER */
+.stagger-button {
+  @apply inline-flex items-center justify-center rounded-[31px]
+         border px-[18px] py-[12px]
+         text-[20px] font-bold leading-[30px]
+         transition-colors duration-200 ease-in-out;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* (Keep the per-character rules as before) */
+.stagger-button [data-button-animate-chars] { 
+  @apply overflow-hidden inline-block relative; 
+}
+.stagger-button [data-button-animate-chars] span {
+  @apply inline-block relative;
+  text-shadow: 0px 1.3em currentColor;
+  transform: translateY(0);
+  transition: transform 0.6s cubic-bezier(0.625, 0.05, 0, 1);
+}
+.stagger-button:hover [data-button-animate-chars] span {
+  transform: translateY(-1.3em);
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+/* If you still want a default hover-bg, keep this */
+.stagger-button:hover {
+  @apply hover:bg-gray-100; /* user can override with a stronger utility */
+}
+
+/* navigation underline styles *//* Place this at the very bottom of globals.css, after all Tailwind imports */
+
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Example “Draw Random Underline” CSS (with minor adjustments for proper
+   vertical placement and no leftover ghost on mouse‐leave).
+   Place this after your Tailwind imports in globals.css.
+   ───────────────────────────────────────────────────────────────────────────── */
+
+   .text-draw {
+    cursor: pointer;
+    margin-left: 1em;
+    margin-right: 1em;
+    padding-top: 0.625em;
+    font-size: .75em;
+    text-decoration: none;
+    /* ensure the box that wraps text—and thus the underline—scales to your font */
+    display: inline-block;
+    position: relative;
+  }
+  
+  .text-draw__span {
+    margin-bottom: 0;
+    font-size: 1.5em;
+    font-weight: 500;
+    line-height: 1.1;
+    display: inline-block;
+  }
+  
+  .text-draw__box {
+    color: #2320a9;     /* this becomes the stroke color via `currentColor` */
+    width: 100%;
+    /* height = .625em as in example, so SVG isn’t flattened too much */
+    height: 0.625em;
+    position: absolute;
+    bottom: -0.5em;     /* nudge underline slightly below text baseline */
+    left: 0;
+    pointer-events: none;   /* allows clicks on the text without interference */
+  }
+  
+  .text-draw__box-svg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: visible !important;
+  }
+
+  .text-draw__box-svg,
+.text-draw__box-svg svg {
+  fill: none !important;
+}
+  /* Override the embedded SVG’s <path> stroke‐width="10" if you want a thinner/thicker line.
+     In the original example, the inline SVG’s path already has stroke-width="10".
+     If you wish to override (for example, make it thicker), uncomment below: */
+  /*
+  .text-draw__box-svg path {
+    stroke-width: 10 !important;
+  }
+  */
+  
+  /* ─────────────────────────────────────────────────────────────────────────────
+     (Ensure you do NOT add any other CSS that conflicts with these selectors.
+     The JS will inject one of your svgVariants into `.text-draw__box`, and
+     DrawSVGPlugin will animate it from 0→100%, then back out on mouse‐leave.)
+  
+     If you still see a “ghost” thin line, confirm your JS is retracting via `drawSVG: "100% 100%"`
+     exactly as in the example. This CSS alone will not produce a ghost—any leftover
+     stroke comes from the JS animation logic not fully clearing the path.
+     ───────────────────────────────────────────────────────────────────────────── */
+  
+
+  .section-eyebrow {
+    @apply text-[20px] leading-[20.8px] font-semibold uppercase tracking-[0.4px] text-[#0073E5];
+    font-family: 'PolySans-Neutral'; /* or 'PolySans' if it's a shared base */
+  }
+
+  .section-heading {
+    @apply text-[40px] leading-[48px] font-normal tracking-[-0.8px] text-[#181D27];
+    font-family: 'PolySans-Neutral';
+  }
+
+  .home-page-keynotes {
+    @apply flex items-center justify-between gap-[148px] border-b border-[#DFE7ED] pb-[10px] pt-3 px-[16px] my-3 mb-0 
+           text-gray-900 text-[24px] leading-normal font-semibold tracking-[0.48px] font-[PolySans] transition-colors duration-400 ease-in-out hover:bg-gray-100;
+  }  
+  .home-page-keynotes:first-child {
+    @apply mt-0;
+  }
+  
+}
+/* Custom global overrides */
+body {
+  @apply bg-white text-gray-900 antialiased;
+  /* Ensure a default font stack if not relying solely on Tailwind's default sans-serif */
+  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; */
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+  @apply transition-colors duration-200;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+/* Add any other global styles or font imports here if needed */
+/* For example, if using Google Fonts:
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+body {
+  font-family: 'Inter', sans-serif;
 }
+*/
+
+
+
+
