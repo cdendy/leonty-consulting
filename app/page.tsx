@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef } from 'react';
 import Image from 'next/image'; 
+import Link from 'next/link';
 import StaggerButton from './components/StaggerButton'; 
 
 export default function HomePage() {
@@ -78,10 +79,9 @@ export default function HomePage() {
         As a leading diversity and inclusion speaker in Canada, Erin bridges the gap between intention
         and impact through authentic leadership development.
       </p>
-      <a href="/about" className="mt-4 inline-block text-black underline">
+      <Link href="/about" className="mt-4 inline-block text-black underline">
         Learn More About Erin →
-      </a>
-
+      </Link>
       <h3 className="mt-10 text-[20px] font-bold leading-[28px] text-[#181D27]">
         Strategic transformation expertise
       </h3>

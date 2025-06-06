@@ -6,7 +6,6 @@ const nextConfig: NextConfig = {
   //   turbo: true, // Turbopack is enabled by default for `next dev` in Next.js 15
   // }, // No longer need to explicitly set these for Next.js 15+
   images: {
-    // domains: ['your-cdn.com', 'images.unsplash.com'], // Add actual domains if used
     remotePatterns: [
       {
         protocol: 'https',
@@ -26,14 +25,13 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '**',
       },
-      // Add other remote patterns if you use external images from other CDNs
-      // For example, if you had 'your-cdn.com':
-      // {
-      //   protocol: 'https',
-      //   hostname: 'your-cdn.com',
-      //   port: '',
-      //   pathname: '**',
-      // },
+      {
+        protocol: 'https',
+        hostname: 'i.ytimg.com',
+        port: '',
+        // Allow loading YouTube video thumbnails (poster frames) like /vi/<video-id>/*
+        pathname: '/vi/**',
+      },
     ],
     formats: ['image/avif', 'image/webp'],
   },

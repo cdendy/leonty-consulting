@@ -1,88 +1,113 @@
-// import KeynoteCard from '../../components/KeynoteCard'; // Adjusted path - Commented out as not used
-import Link from 'next/link';
-import type { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'Keynotes by Erin Leonty | Leonty Consulting',
-  description: 'Explore impactful keynotes on leadership, resilience, and future-proofing teams by Erin Leonty.',
-};
-
-// Sample data for topics - replace with actual data
-const topics = [
-  {
-    title: "From Awareness to Action: How to Be an Ally in a Polarized World",
-    blurb: "This keynote explores practical strategies for effective allyship, moving beyond performative gestures to create real, sustainable change in diverse environments."
-  },
-  {
-    title: "From Burnout to Belonging: Tapping Into Your Power for Good",
-    blurb: "Discover how to foster a culture of belonging that combats burnout, empowers individuals, and unlocks collective potential for organizational success."
-  },
-  {
-    title: "From Grip to Great: Letting Go to Find Your Flow",
-    blurb: "Learn techniques to release rigid thinking and embrace adaptability, enabling leaders and teams to find their flow and achieve peak performance."
-  },
-  {
-    title: "Sovereign Service: Rethinking the Idea of “Service Above Self”",
-    blurb: "A transformative look at service leadership, emphasizing self-care and boundaries as crucial components for sustainable and impactful service."
-  }
-];
-
-export default function KeynotesPage() {
+"use client";
+import { useEffect, useRef } from 'react';
+import { FaPlay } from 'react-icons/fa';
+import Image from 'next/image'; 
+import StaggerButton from '../../components/StaggerButton'; 
+import WatchErin from '../../components/WatchErin';
+export default function HomePage() {
   return (
-    <div className="container mx-auto px-6 py-16 space-y-20">
-    {/* ───────────── INTRO ───────────── */}
-    <section className="fadeSection text-center max-w-3xl mx-auto">
-      <h1 className="mb-4 home-lede">Creating Lasting Change Through Authentic Leadership</h1>
-      <p className="text-gray-700">
-        Erin’s presentations go beyond inspiration — they catalyze measurable shifts in how leaders show up, how teams
-        collaborate, and how organizations thrive.
+<div className="space-y-24">
+
+    <main className="px-6 mx-auto max-w-[1360px] grid grid-cols-12 gap-5 mt-18 mb-36">
+      <div className="col-span-10 col-start-2 mb-10">
+        {/* 
+          → Because we did NOT pass a `height` prop, 
+            useAspectRatio={true} is in effect by default, 
+            so it will force a 16:9 box. 
+        */}
+        <WatchErin videoUrl="https://www.youtube.com/watch?v=NFsFgerTO6E" />
+      </div>
+    </main>
+
+      <section className="fadeSection px-6 mx-auto max-w-340 grid grid-cols-12 gap-5 mt-18 mb-36">
+      <p className="section-eyebrow col-start-2">About</p>
+      <h2 className="section-heading mt-2 mb-8 col-start-2 col-span-10">
+      From Finance Executive to Transformation Leader: The Authentic Path to Sustainable High Performance
+      </h2>
+    <div className="col-span-10 col-start-2 mb-20">
+      <p className="text-gray-700 text-2xl">
+      Erin Leonty transformed her own career trajectory—and then did the same for organizations. Starting in finance as the &quot;only woman in the room,&quot; she learned firsthand how to navigate traditional business environments while staying true to her values. That experience became her foundation for driving inclusion work at companies like Finning International—proving her approach works even in the toughest, most skeptical environments. Later, as VP of Social Purpose at tech company Clio, she achieved what most leaders think is impossible: 31% increase in women&apos;s leadership representation while driving employee engagement up 6x. Her secret? Discovering that authenticity isn&apos;t the opposite of performance—it&apos;s what unlocks it.
       </p>
-    </section>
+      <p className="text-gray-700 mt-10 text-l">
+      Most change initiatives fail because leaders try to fix culture with strategy alone. Erin addresses the real challenge: helping established leaders evolve their influence without losing the operational excellence that built their success. When she takes the stage, audiences don&apos;t just learn new concepts—they experience breakthrough moments that shift how they see leadership itself.
+      </p>
+    </div>
+  </section>
+  <section className="fadeSection px-6 mx-auto max-w-340 grid grid-cols-12 gap-5 mb-36">
+    <div className="col-span-10 col-start-2 mb-10">
+      <p className="section-eyebrow">THE DIFFERENCE</p>
+      <h2 className="section-heading mt-2 mb-8">
+      What Sets Erin Apart
+      </h2>
+      <h3 className="mt-10 text-[20px] font-bold leading-[28px] text-[#181D27]">
+      Lived the Transformation
+      </h3>
+      <p className="mt-2 text-[18px] leading-[28px] text-[#4B5057]">
+      Born in Edmonton, first in her family to earn a university degree, Erin built her expertise by navigating her own evolution from &quot;only woman in the room&quot; in finance to executive leadership in tech. She doesn&apos;t just teach transformation—she&apos;s lived it.
+      </p>
 
-    {/* ───────────── WHY BOOK ───────────── */}
-    <section className="fadeSection bg-gray-50 p-8 rounded-lg space-y-2 max-w-4xl mx-auto">
-      {[
-        'Proven Impact • measurable organizational improvements',
-        'Authentic Leadership Expertise',
-        'Engaging Story-driven Delivery',
-        'Flexible Formats (30-90 min, workshops, virtual)',
-        'Regional Insight • Western Canada focus',
-        'DEI Authority with proven frameworks',
-      ].map((line) => (
-        <div key={line} className="text-gray-700">— {line}</div>
-      ))}
-    </section>
+      {/* Second item */}
+      <h3 className="mt-8 text-[20px] font-bold leading-[28px] text-[#181D27]">
+      Proven in Tough Environments
+      </h3>
+      <p className="mt-2 text-[18px] leading-[28px] text-[#4B5057]">
+      While most change experts work with progressive tech companies, Erin proved her approach in traditional industrial settings where skepticism runs high and change is hardest. Her track record includes driving meaningful results in environments others avoid.
+      </p>
 
-    {/* ───────────── TOPICS ───────────── */}
-    <section className="space-y-20">
-      {topics.map((t, i) => (
-        <section key={i} className="fadeSection flex flex-col md:flex-row items-center gap-8">
-          <div className="md:w-1/2 space-y-4">
-            <h2 className="text-2xl font-bold">{t.title}</h2>
-            <p className="text-gray-700">{t.blurb}</p>
-            <ul className="list-disc list-inside space-y-1 text-gray-700">
-              <li className="font-semibold">Key Takeaways include:</li>
-              <li>Placeholder takeaway 1</li>
-              <li>Placeholder takeaway 2</li>
-              <li>Placeholder takeaway 3</li>
-            </ul>
-            <p className="italic text-gray-600">Typical format: 45-75 min + Q&A</p>
-          </div>
-          <div className="md:w-1/2 h-64 bg-gray-200 rounded">
-            <img src="https://picsum.photos/600/400" alt={t.title} className="w-full h-full object-cover rounded" />
-          </div>
-        </section>
-      ))}
-    </section>
+      {/* Third item */}
+      <h3 className="mt-8 text-[20px] font-bold leading-[28px] text-[#181D27]">
+      Business-Proven Results
+      </h3>
+      <p className="mt-2 text-[18px] leading-[28px] text-[#4B5057]">
+      Her work drives measurable outcomes: improved retention, accelerated growth, enhanced team performance. Because sustainable change isn&apos;t about inspiration—it&apos;s about giving leaders practical tools that integrate with how businesses actually operate.
+      </p>
 
-    {/* ───────────── CTA ───────────── */}
-    <section className="fadeSection text-center py-12 bg-gray-100 rounded-lg">
-      <h3 className="text-2xl font-bold mb-4">Interested in Booking One of These Keynotes?</h3>
-      <Link href="/contact" className="inline-block underline">
-        Contact Us to Reserve Your Date
-      </Link>
-    </section>
-  </div>
+       {/* Fourth item */}
+      <h3 className="mt-8 text-[20px] font-bold leading-[28px] text-[#181D27]">
+      Bridge-Builder by Nature
+      </h3>
+      <p className="mt-2 text-[18px] leading-[28px] text-[#4B5057]">
+      Whether connecting traditional industries with modern workplace expectations or helping tech companies scale without losing their culture, Erin helps organizations navigate complexity while preserving what makes them successful.
+      </p>
+      {/* Fifth item */}
+      <h3 className="mt-8 text-[20px] font-bold leading-[28px] text-[#181D27]">
+      Western Canadian Perspective
+      </h3>
+      <p className="mt-2 text-[18px] leading-[28px] text-[#4B5057]">
+      Based in Edmonton with deep roots in Western Canadian business culture, Erin understands the unique dynamics of regional leadership—from family-owned industrial companies to fast-growing tech startups—and how to drive change that fits the local context.
+      </p>
+    </div>
+  </section>
+  <section className="fadeSection px-6 mx-auto max-w-340 grid grid-cols-12 gap-5 mb-36">
+    <div className="col-span-10 col-start-2 mb-10">
+      <p className="section-eyebrow">THE REASON</p>
+      <h2 className="section-heading mt-2 mb-8">
+      Why Choose Erin
+      </h2>
+      <h3 className="mt-10 text-[20px] font-bold leading-[28px] text-[#181D27]">
+      Engaging Presentations That Drive Action: 
+      </h3>
+      <p className="mt-2 text-[18px] leading-[28px] text-[#4B5057]">
+      Erin&apos;s keynotes balance inspiration with implementation. Audiences leave with specific tools they can use immediately, not just motivation that fades by Tuesday. Her interactive style keeps energy high while ensuring key messages stick—event organizers consistently report strong participant engagement scores and positive feedback.
+      </p>
+
+      {/* Second item */}
+      <h3 className="mt-8 text-[20px] font-bold leading-[28px] text-[#181D27]">
+      Seamless Event Partnership
+      </h3>
+      <p className="mt-2 text-[18px] leading-[28px] text-[#4B5057]">
+    From initial consultation to post-event follow-up, Erin makes the planning process easy. She arrives early, adapts to last-minute changes with grace, and works collaboratively with your team to ensure her message aligns perfectly with your event goals. Meeting planners appreciate her professionalism and flexibility.
+      </p>
+
+      {/* Fifth item */}
+      <h3 className="mt-8 text-[20px] font-bold leading-[28px] text-[#181D27]">
+      Proven Speaking Excellence:
+      </h3>
+      <p className="mt-2 text-[18px] leading-[28px] text-[#4B5057]">
+      With a track record of successful keynotes across industries—from intimate executive retreats to large conference stages—Erin delivers consistent quality regardless of format or audience size. Her presentations work equally well for in-person, virtual, or hybrid events, with full technical support and backup plans included.
+      </p>
+    </div>
+  </section>
+ </div>
   );
 }
-

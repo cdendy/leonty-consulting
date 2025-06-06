@@ -36,11 +36,11 @@ export default function HomePage() {
 
       {/* ───────────── ABOUT PREVIEW ───────────── */}
       <section className="fadeSection px-6 mx-auto max-w-340 grid grid-cols-12 gap-5 mb-36">
-    <div className="col-span-10 col-start-2 mb-20">
-      <p className="section-eyebrow">About</p>
-      <h2 className="section-heading mt-2 mb-8">
+      <p className="section-eyebrow col-start-2">About</p>
+      <h2 className="section-heading mt-2 mb-8 col-start-2 col-span-10">
       From Finance Executive to Transformation Leader: The Authentic Path to Sustainable High Performance
       </h2>
+    <div className="col-span-10 col-start-2 mb-20">
       <p className="text-gray-700 text-2xl">
       Erin Leonty transformed her own career trajectory—and then did the same for organizations. Starting in finance as the &quot;only woman in the room,&quot; she learned firsthand how to navigate traditional business environments while staying true to her values. That experience became her foundation for driving inclusion work at companies like Finning International—proving her approach works even in the toughest, most skeptical environments. Later, as VP of Social Purpose at tech company Clio, she achieved what most leaders think is impossible: 31% increase in women&apos;s leadership representation while driving employee engagement up 6x. Her secret? Discovering that authenticity isn&apos;t the opposite of performance—it&apos;s what unlocks it.
       </p>
@@ -48,7 +48,9 @@ export default function HomePage() {
       Most change initiatives fail because leaders try to fix culture with strategy alone. Erin addresses the real challenge: helping established leaders evolve their influence without losing the operational excellence that built their success. When she takes the stage, audiences don&apos;t just learn new concepts—they experience breakthrough moments that shift how they see leadership itself.
       </p>
     </div>
-    <div className="col-span-10 col-start-2 mb-20">
+  </section>
+  <section className="fadeSection px-6 mx-auto max-w-340 grid grid-cols-12 gap-5 mb-36">
+    <div className="col-span-10 col-start-2 mb-10">
       <p className="section-eyebrow">THE DIFFERENCE</p>
       <h2 className="section-heading mt-2 mb-8">
       What Sets Erin Apart
@@ -92,8 +94,36 @@ export default function HomePage() {
       </p>
     </div>
   </section>
+  <section className="fadeSection px-6 mx-auto max-w-340 grid grid-cols-12 gap-5 mb-36">
+    <div className="col-span-10 col-start-2 mb-10">
+      <p className="section-eyebrow">THE REASON</p>
+      <h2 className="section-heading mt-2 mb-8">
+      Why Choose Erin
+      </h2>
+      <h3 className="mt-10 text-[20px] font-bold leading-[28px] text-[#181D27]">
+      Engaging Presentations That Drive Action: 
+      </h3>
+      <p className="mt-2 text-[18px] leading-[28px] text-[#4B5057]">
+      Erin&apos;s keynotes balance inspiration with implementation. Audiences leave with specific tools they can use immediately, not just motivation that fades by Tuesday. Her interactive style keeps energy high while ensuring key messages stick—event organizers consistently report strong participant engagement scores and positive feedback.
+      </p>
 
-      {/* ───────────── TESTIMONIAL ───────────── */}
+      {/* Second item */}
+      <h3 className="mt-8 text-[20px] font-bold leading-[28px] text-[#181D27]">
+      Seamless Event Partnership
+      </h3>
+      <p className="mt-2 text-[18px] leading-[28px] text-[#4B5057]">
+    From initial consultation to post-event follow-up, Erin makes the planning process easy. She arrives early, adapts to last-minute changes with grace, and works collaboratively with your team to ensure her message aligns perfectly with your event goals. Meeting planners appreciate her professionalism and flexibility.
+      </p>
+
+      {/* Fifth item */}
+      <h3 className="mt-8 text-[20px] font-bold leading-[28px] text-[#181D27]">
+      Proven Speaking Excellence:
+      </h3>
+      <p className="mt-2 text-[18px] leading-[28px] text-[#4B5057]">
+      With a track record of successful keynotes across industries—from intimate executive retreats to large conference stages—Erin delivers consistent quality regardless of format or audience size. Her presentations work equally well for in-person, virtual, or hybrid events, with full technical support and backup plans included.
+      </p>
+    </div>
+  </section>
  </div>
   );
 }
