@@ -204,7 +204,42 @@
   }
   
 }
+/* 1. HEADLINE (h3) inside .keynote-item */
+.keynote-item h3 {
+  @apply mt-2 text-3xl text-[#0073E5];
+  font-family: 'PolySans-Median';
+}
 
+/* 2. “01” indicator (span) */
+.keynote-item span {
+  @apply text-2xl font-semibold;
+  font-family: 'PolySans-Neutral';
+}
+
+/* 3. ALL paragraphs inside .keynote-item */
+.keynote-item p {
+  @apply mt-4 text-xl text-gray-800 leading-relaxed;
+}
+
+/* 4. The “note” paragraph (italic, blue) */
+.keynote-item p.note {
+  @apply mt-4 text-xl text-[#0073E5] italic;
+}
+
+/* 5. Unordered list styling inside .keynote-item */
+.keynote-item ul {
+  @apply mt-4 list-disc list-inside text-xl text-gray-800 mb-6;
+}
+
+/* 6. Each list item */
+.keynote-item li {
+  @apply mb-2;
+}
+
+/* 7. Divider bar at the bottom */
+.keynote-item .divider {
+  @apply mt-8 border-t border-gray-300;
+}
 a {
   @apply transition-colors duration-200;
 }

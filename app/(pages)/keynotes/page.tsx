@@ -18,96 +18,202 @@ export default function HomePage() {
         <WatchErin videoUrl="https://www.youtube.com/watch?v=NFsFgerTO6E" />
       </div>
     </main>
-
-      <section className="fadeSection px-6 mx-auto max-w-340 grid grid-cols-12 gap-5 mt-18 mb-36">
-      <p className="section-eyebrow col-start-2">About</p>
-      <h2 className="section-heading mt-2 mb-8 col-start-2 col-span-10">
-      From Finance Executive to Transformation Leader: The Authentic Path to Sustainable High Performance
-      </h2>
-    <div className="col-span-10 col-start-2 mb-20">
-      <p className="text-gray-700 text-2xl">
-      Erin Leonty transformed her own career trajectory—and then did the same for organizations. Starting in finance as the &quot;only woman in the room,&quot; she learned firsthand how to navigate traditional business environments while staying true to her values. That experience became her foundation for driving inclusion work at companies like Finning International—proving her approach works even in the toughest, most skeptical environments. Later, as VP of Social Purpose at tech company Clio, she achieved what most leaders think is impossible: 31% increase in women&apos;s leadership representation while driving employee engagement up 6x. Her secret? Discovering that authenticity isn&apos;t the opposite of performance—it&apos;s what unlocks it.
-      </p>
-      <p className="text-gray-700 mt-10 text-l">
-      Most change initiatives fail because leaders try to fix culture with strategy alone. Erin addresses the real challenge: helping established leaders evolve their influence without losing the operational excellence that built their success. When she takes the stage, audiences don&apos;t just learn new concepts—they experience breakthrough moments that shift how they see leadership itself.
-      </p>
-    </div>
-  </section>
   <section className="fadeSection px-6 mx-auto max-w-340 grid grid-cols-12 gap-5 mb-36">
     <div className="col-span-10 col-start-2 mb-10">
-      <p className="section-eyebrow">THE DIFFERENCE</p>
+      <p className="section-eyebrow">Keynote Speaking</p>
       <h2 className="section-heading mt-2 mb-8">
-      What Sets Erin Apart
+      Leadership Transformation That Sticks
       </h2>
-      <h3 className="mt-10 text-[20px] font-bold leading-[28px] text-[#181D27]">
-      Lived the Transformation
-      </h3>
-      <p className="mt-2 text-[18px] leading-[28px] text-[#4B5057]">
-      Born in Edmonton, first in her family to earn a university degree, Erin built her expertise by navigating her own evolution from &quot;only woman in the room&quot; in finance to executive leadership in tech. She doesn&apos;t just teach transformation—she&apos;s lived it.
-      </p>
+<p>The best keynotes don&apos;t just inspire—they shift how leaders think about what&apos;s possible. Erin&apos;s presentations create breakthrough moments where established leaders discover they don&apos;t have to choose between driving results and fostering authentic connection. Her audiences leave with practical frameworks they implement immediately, turning insight into measurable organizational change.</p>
 
-      {/* Second item */}
-      <h3 className="mt-8 text-[20px] font-bold leading-[28px] text-[#181D27]">
-      Proven in Tough Environments
-      </h3>
-      <p className="mt-2 text-[18px] leading-[28px] text-[#4B5057]">
-      While most change experts work with progressive tech companies, Erin proved her approach in traditional industrial settings where skepticism runs high and change is hardest. Her track record includes driving meaningful results in environments others avoid.
-      </p>
+<p>Whether you&apos;re leading an annual leadership retreat, hosting a conference on the future of work, or bringing teams together for strategic planning, Erin delivers content that bridges the gap between aspiration and action. Her approach honors what&apos;s working in your organization while evolving what needs to change—creating sustainable transformation that builds on your existing strengths.</p>
 
-      {/* Third item */}
-      <h3 className="mt-8 text-[20px] font-bold leading-[28px] text-[#181D27]">
-      Business-Proven Results
-      </h3>
-      <p className="mt-2 text-[18px] leading-[28px] text-[#4B5057]">
-      Her work drives measurable outcomes: improved retention, accelerated growth, enhanced team performance. Because sustainable change isn&apos;t about inspiration—it&apos;s about giving leaders practical tools that integrate with how businesses actually operate.
-      </p>
+<p>From intimate executive sessions to large conference stages, Erin&apos;s keynotes generate the kind of engaged dialogue that continues long after the presentation ends. Because real leadership transformation happens when people feel safe to explore new possibilities while maintaining confidence in their proven capabilities.</p>
 
-       {/* Fourth item */}
-      <h3 className="mt-8 text-[20px] font-bold leading-[28px] text-[#181D27]">
-      Bridge-Builder by Nature
-      </h3>
-      <p className="mt-2 text-[18px] leading-[28px] text-[#4B5057]">
-      Whether connecting traditional industries with modern workplace expectations or helping tech companies scale without losing their culture, Erin helps organizations navigate complexity while preserving what makes them successful.
-      </p>
-      {/* Fifth item */}
-      <h3 className="mt-8 text-[20px] font-bold leading-[28px] text-[#181D27]">
-      Western Canadian Perspective
-      </h3>
-      <p className="mt-2 text-[18px] leading-[28px] text-[#4B5057]">
-      Based in Edmonton with deep roots in Western Canadian business culture, Erin understands the unique dynamics of regional leadership—from family-owned industrial companies to fast-growing tech startups—and how to drive change that fits the local context.
-      </p>
     </div>
   </section>
-  <section className="fadeSection px-6 mx-auto max-w-340 grid grid-cols-12 gap-5 mb-36">
-    <div className="col-span-10 col-start-2 mb-10">
-      <p className="section-eyebrow">THE REASON</p>
-      <h2 className="section-heading mt-2 mb-8">
-      Why Choose Erin
-      </h2>
-      <h3 className="mt-10 text-[20px] font-bold leading-[28px] text-[#181D27]">
-      Engaging Presentations That Drive Action: 
-      </h3>
-      <p className="mt-2 text-[18px] leading-[28px] text-[#4B5057]">
-      Erin&apos;s keynotes balance inspiration with implementation. Audiences leave with specific tools they can use immediately, not just motivation that fades by Tuesday. Her interactive style keeps energy high while ensuring key messages stick—event organizers consistently report strong participant engagement scores and positive feedback.
-      </p>
+  <section className="keynote-item px-6 mx-auto max-w-[1360px] grid grid-cols-12 gap-5 mb-36">
+      {/* 
+        On small screens: col-span-12 (full width)
+        On md+ screens: col-span-8 (i.e. 8/12 of 1360px)
+      */}
+      <div className="col-span-12 md:col-span-7 md:col-start-5 relative text-left mb-20">
+        {/* 01 indicator */}
+        <span>01</span>
 
-      {/* Second item */}
-      <h3 className="mt-8 text-[20px] font-bold leading-[28px] text-[#181D27]">
-      Seamless Event Partnership
-      </h3>
-      <p className="mt-2 text-[18px] leading-[28px] text-[#4B5057]">
-    From initial consultation to post-event follow-up, Erin makes the planning process easy. She arrives early, adapts to last-minute changes with grace, and works collaboratively with your team to ensure her message aligns perfectly with your event goals. Meeting planners appreciate her professionalism and flexibility.
-      </p>
+        {/* Headline */}
+        <h3>From Awareness to Action: How to Be an Ally in a Polarized World</h3>
 
-      {/* Fifth item */}
-      <h3 className="mt-8 text-[20px] font-bold leading-[28px] text-[#181D27]">
-      Proven Speaking Excellence:
-      </h3>
-      <p className="mt-2 text-[18px] leading-[28px] text-[#4B5057]">
-      With a track record of successful keynotes across industries—from intimate executive retreats to large conference stages—Erin delivers consistent quality regardless of format or audience size. Her presentations work equally well for in-person, virtual, or hybrid events, with full technical support and backup plans included.
-      </p>
-    </div>
-  </section>
+        {/* Illustration (negative margins on md+) */}
+        {/* <div className="relative mt-4 mb-6 md:absolute md:top-0 md:right-0 md:w-1/2 lg:w-2/5">
+          <Image
+            src="/images/lion-illustration.png"
+            alt="Lion illustration"
+            width={400}
+            height={400}
+            className="md:-mr-12"
+          />
+        </div> */}
+
+        {/* First paragraph */}
+        <p>
+          In today&apos;s increasingly divided landscape, organizations are struggling to navigate complex social issues while maintaining cohesive cultures. As polarization intensifies in workplaces, the ability to build bridges across differences has become a critical leadership competency. In this thought-provoking, actionable, and HIGHLY customized presentation, Erin reveals how effective allyship isn&apos;t just about good intentions—it&apos;s about creating measurable business impact through authentic inclusion.
+        </p>
+
+        {/* Second paragraph */}
+        <p>
+          Backed by real-world transformation examples and delivered with warm authenticity, this keynote explores how successful organizations are developing cultures where diverse perspectives drive innovation and results.
+        </p>
+
+        {/* Bulleted list */}
+        <ul>
+          <li>How polarization in the workplace directly impacts talent retention, engagement, and performance</li>
+          <li>Why traditional diversity approaches often fail to create sustainable change</li>
+          <li>The critical balance between speaking up and creating space for different voices</li>
+          <li>Actionable strategies for moving beyond awareness to meaningful action that transforms culture</li>
+        </ul>
+
+        {/* Highlighted italic note */}
+        <p className="note">
+          All attendees receive Erin&apos;s proven framework (developed through work with numerous major organizations) with specific, implementable tactics that can be applied immediately to build bridges in even the most challenging environments.
+        </p>
+
+        {/* Bottom divider */}
+        <div className="divider" />
+      </div>
+      <div className="col-span-12 md:col-span-7 md:col-start-5 relative text-right">
+        {/* 01 indicator */}
+        <span>01</span>
+
+        {/* Headline */}
+        <h3>From Awareness to Action: How to Be an Ally in a Polarized World</h3>
+
+        {/* Illustration (negative margins on md+) */}
+        {/* <div className="relative mt-4 mb-6 md:absolute md:top-0 md:right-0 md:w-1/2 lg:w-2/5">
+          <Image
+            src="/images/lion-illustration.png"
+            alt="Lion illustration"
+            width={400}
+            height={400}
+            className="md:-mr-12"
+          />
+        </div> */}
+
+        {/* First paragraph */}
+        <p>
+          In today&apos;s increasingly divided landscape, organizations are struggling to navigate complex social issues while maintaining cohesive cultures. As polarization intensifies in workplaces, the ability to build bridges across differences has become a critical leadership competency. In this thought-provoking, actionable, and HIGHLY customized presentation, Erin reveals how effective allyship isn&apos;t just about good intentions—it&apos;s about creating measurable business impact through authentic inclusion.
+        </p>
+
+        {/* Second paragraph */}
+        <p>
+          Backed by real-world transformation examples and delivered with warm authenticity, this keynote explores how successful organizations are developing cultures where diverse perspectives drive innovation and results.
+        </p>
+
+        {/* Bulleted list */}
+        <ul>
+          <li>How polarization in the workplace directly impacts talent retention, engagement, and performance</li>
+          <li>Why traditional diversity approaches often fail to create sustainable change</li>
+          <li>The critical balance between speaking up and creating space for different voices</li>
+          <li>Actionable strategies for moving beyond awareness to meaningful action that transforms culture</li>
+        </ul>
+
+        {/* Highlighted italic note */}
+        <p className="note">
+          All attendees receive Erin&apos;s proven framework (developed through work with numerous major organizations) with specific, implementable tactics that can be applied immediately to build bridges in even the most challenging environments.
+        </p>
+
+        {/* Bottom divider */}
+        <div className="divider" />
+      </div>
+      <div className="col-span-12 md:col-span-7 md:col-start-5 relative text-left mb-20">
+        {/* 01 indicator */}
+        <span>01</span>
+
+        {/* Headline */}
+        <h3>From Awareness to Action: How to Be an Ally in a Polarized World</h3>
+
+        {/* Illustration (negative margins on md+) */}
+        {/* <div className="relative mt-4 mb-6 md:absolute md:top-0 md:right-0 md:w-1/2 lg:w-2/5">
+          <Image
+            src="/images/lion-illustration.png"
+            alt="Lion illustration"
+            width={400}
+            height={400}
+            className="md:-mr-12"
+          />
+        </div> */}
+
+        {/* First paragraph */}
+        <p>
+          In today&apos;s increasingly divided landscape, organizations are struggling to navigate complex social issues while maintaining cohesive cultures. As polarization intensifies in workplaces, the ability to build bridges across differences has become a critical leadership competency. In this thought-provoking, actionable, and HIGHLY customized presentation, Erin reveals how effective allyship isn&apos;t just about good intentions—it&apos;s about creating measurable business impact through authentic inclusion.
+        </p>
+
+        {/* Second paragraph */}
+        <p>
+          Backed by real-world transformation examples and delivered with warm authenticity, this keynote explores how successful organizations are developing cultures where diverse perspectives drive innovation and results.
+        </p>
+
+        {/* Bulleted list */}
+        <ul>
+          <li>How polarization in the workplace directly impacts talent retention, engagement, and performance</li>
+          <li>Why traditional diversity approaches often fail to create sustainable change</li>
+          <li>The critical balance between speaking up and creating space for different voices</li>
+          <li>Actionable strategies for moving beyond awareness to meaningful action that transforms culture</li>
+        </ul>
+
+        {/* Highlighted italic note */}
+        <p className="note">
+          All attendees receive Erin&apos;s proven framework (developed through work with numerous major organizations) with specific, implementable tactics that can be applied immediately to build bridges in even the most challenging environments.
+        </p>
+
+        {/* Bottom divider */}
+        <div className="divider" />
+      </div>
+      <div className="col-span-12 md:col-span-7 md:col-start-5 relative text-right">
+        {/* 01 indicator */}
+        <span>01</span>
+
+        {/* Headline */}
+        <h3>From Awareness to Action: How to Be an Ally in a Polarized World</h3>
+
+        {/* Illustration (negative margins on md+) */}
+        {/* <div className="relative mt-4 mb-6 md:absolute md:top-0 md:right-0 md:w-1/2 lg:w-2/5">
+          <Image
+            src="/images/lion-illustration.png"
+            alt="Lion illustration"
+            width={400}
+            height={400}
+            className="md:-mr-12"
+          />
+        </div> */}
+
+        {/* First paragraph */}
+        <p>
+          In today&apos;s increasingly divided landscape, organizations are struggling to navigate complex social issues while maintaining cohesive cultures. As polarization intensifies in workplaces, the ability to build bridges across differences has become a critical leadership competency. In this thought-provoking, actionable, and HIGHLY customized presentation, Erin reveals how effective allyship isn&apos;t just about good intentions—it&apos;s about creating measurable business impact through authentic inclusion.
+        </p>
+
+        {/* Second paragraph */}
+        <p>
+          Backed by real-world transformation examples and delivered with warm authenticity, this keynote explores how successful organizations are developing cultures where diverse perspectives drive innovation and results.
+        </p>
+
+        {/* Bulleted list */}
+        <ul>
+          <li>How polarization in the workplace directly impacts talent retention, engagement, and performance</li>
+          <li>Why traditional diversity approaches often fail to create sustainable change</li>
+          <li>The critical balance between speaking up and creating space for different voices</li>
+          <li>Actionable strategies for moving beyond awareness to meaningful action that transforms culture</li>
+        </ul>
+
+        {/* Highlighted italic note */}
+        <p className="note">
+          All attendees receive Erin&apos;s proven framework (developed through work with numerous major organizations) with specific, implementable tactics that can be applied immediately to build bridges in even the most challenging environments.
+        </p>
+
+        {/* Bottom divider */}
+        <div className="divider" />
+      </div>
+    </section>
  </div>
   );
 }
