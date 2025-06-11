@@ -63,6 +63,8 @@ export default function StaggerButton({
         ${bgColorClass}
         ${borderColorClass}
         ${className}
+        px-4 py-2 text-base rounded-[24px] min-h-[44px] min-w-[44px] 
+        sm:px-[18px] sm:py-[12px] sm:text-[20px] sm:rounded-[31px]
       `.trim()}
     >
       <span data-button-animate-chars ref={textRef}>

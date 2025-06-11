@@ -5,25 +5,25 @@ import StaggerButton from './StaggerButton';
 
 export default function SubscribeSection() {
   return (
-    <section className="bg-[#EDE1D1] px-6 py-24">
-      <div className="max-w-[1280px] mx-auto bg-[#0073E5] rounded-[24px] px-16 py-16 grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+    <section className="bg-[#EDE1D1] px-4 py-10 sm:px-6 sm:py-24">
+      <div className="max-w-[1280px] mx-auto bg-[#0073E5] rounded-[24px] px-4 py-8 sm:px-16 sm:py-16 grid grid-cols-1 md:grid-cols-2 items-center gap-4 sm:gap-8">
         {/* Left column – headline and subtext */}
         <div>
-          <h2 className="text-white text-[28px] leading-[36px] font-bold subscribe_header">
+          <h2 className="text-white text-[22px] leading-[28px] font-bold subscribe_header sm:text-[28px] sm:leading-[36px]">
             Join 2,000+ subscribers
           </h2>
-          <p className="text-white text-[18px] leading-[28px] mt-2">
+          <p className="text-white text-[16px] leading-[24px] mt-2 sm:text-[18px] sm:leading-[28px]">
             Stay in the loop with everything you need to know.
           </p>
         </div>
 
         {/* Right column – input, button, and policy */}
-        <div className="flex flex-col gap-4">
-          <form className="flex w-full gap-4">
+        <div className="flex flex-col gap-3 sm:gap-4">
+          <form className="flex flex-col w-full gap-3 sm:flex-row sm:gap-4">
             <input
               type="email"
               placeholder="Enter your email"
-              className="flex-1 px-4 py-3 rounded-[10px] text-gray-900 text-base focus:outline-none bg-white"
+              className="flex-1 px-3 py-2 rounded-[8px] text-gray-900 text-base focus:outline-none bg-white sm:px-4 sm:py-3 sm:rounded-[10px]"
             />
             {/* <button
               type="submit"

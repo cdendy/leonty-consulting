@@ -3,7 +3,7 @@
 
 export default function TestimonialCarousel() {
   return (
-    <section className="px-6 py-16 bg-[#FFF7EE]">
+    <section className="px-4 py-8 sm:px-6 sm:py-16 bg-[#FFF7EE]">
       <div className="max-w-[1280px] mx-auto">
         {/* Radio inputs for slide control */}
         <input type="radio" name="carousel" id="slide1" className="sr-only peer/slide1" defaultChecked />
@@ -42,7 +42,7 @@ export default function TestimonialCarousel() {
         </div>
 
         {/* Navigation dots */}
-        <div className="flex justify-center mt-8 gap-4">
+        <div className="flex justify-center mt-6 gap-3 sm:mt-8 sm:gap-4">
           <label htmlFor="slide1" className="w-3 h-3 rounded-full bg-[#D5D7DA] peer-checked/slide1:bg-[#0073E5] cursor-pointer"></label>
           <label htmlFor="slide2" className="w-3 h-3 rounded-full bg-[#D5D7DA] peer-checked/slide2:bg-[#0073E5] cursor-pointer"></label>
           <label htmlFor="slide3" className="w-3 h-3 rounded-full bg-[#D5D7DA] peer-checked/slide3:bg-[#0073E5] cursor-pointer"></label>

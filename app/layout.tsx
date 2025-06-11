@@ -38,7 +38,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="flex flex-col min-h-screen text-gray-800 antialiased" style={{ backgroundColor: '#FFF8EE' }}>
         <Header />
-        <main className="flex-grow">{children}</main>
+        <main className="flex-grow pt-24 md:pt-28">{children}</main>
         <SubscribeSection />
         <Footer />
       </body>

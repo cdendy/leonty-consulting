@@ -22,8 +22,8 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-black opacity-30 -z-10"></div>
         {/* Content container with relative positioning and higher z-index */}
         <div className="relative z-10 max-w-[1280px] mx-auto grid grid-cols-12 gap-5 pt-0 sm:pt-[127px]">
-          <div className="col-span-6 col-start-1 flex flex-col items-start">
-            <h1 className="home-lede text-white mb-7 leading-[.9] ml-[-32px]">
+          <div className="col-span-12 md:col-span-6 md:col-start-1 flex flex-col items-start">
+            <h1 className="home-lede text-white mb-7 leading-[.9] md:ml-[-32px]">
               Ignite your pride
             </h1>
             <p className="mt-4 text-lg md:text-2xl text-white">
@@ -68,7 +68,7 @@ export default function HomePage() {
 
       {/* ───────────── ABOUT PREVIEW ───────────── */}
       <section className="fadeSection px-6 mx-auto max-w-340 grid grid-cols-12 gap-5 mb-36">
-    <div className="col-span-6 col-start-1">
+    <div className="col-span-12 md:col-span-6 md:col-start-1">
       <p className="section-eyebrow">About</p>
       <h2 className="section-heading mt-2 mb-8">
         Transformative leadership that creates lasting impact
@@ -105,7 +105,7 @@ export default function HomePage() {
         Whether working with C-suite executives or facilitating team workshops, Erin helps organizations bridge intention and impact. She transforms workplace cultures by connecting business performance with human potential.
       </p>
     </div>
-    <div className="mt-8 md:mt-0 h-100% bg-gray-200 rounded col-span-6 col-start-7" />
+    <div className="hidden md:block mt-8 md:mt-0 h-100% bg-gray-200 rounded col-span-6 col-start-7" />
     {/* img placeholder above */}
   </section>
 
@@ -115,7 +115,7 @@ export default function HomePage() {
       <h2 className="section-heading mt-2 mb-8 col-span-12">
         Keynotes and workshops <br /> that transform, energize, <br />  and empower.
       </h2>
-      <div className="col-span-6 col-start-1">
+      <div className="col-span-12 md:col-span-6 md:col-start-1">
       <p className='mb-8'>
         Erin&apos;s executive leadership programs are the perfect blend of strategic excellence and authentic transformation. Each presentation is powered by extensive corporate experience and proven methodologies for sustainable high performance.
       </p>
@@ -123,21 +123,21 @@ export default function HomePage() {
       Her objective is simple: help you elevate your leadership by building environments where both results and relationships flourish, using practical frameworks that drive measurable business outcomes while fostering genuine organizational evolution.
       </p>
       </div>
-      <div className="col-span-6 col-start-7">
+      <div className="col-span-12 md:col-span-6 md:col-start-7">
         <ul className="list-none p-0 m-0 space-y-0 max-w-2xl mx-auto text-gray-700">
-            <li className="home-page-keynotes">
+            <li className="home-page-keynotes text-base leading-6 md:text-lg md:leading-7">
             From Awareness to Action: How to Be an Ally in a Polarized World
             <Image src="/images/arrow_right_blue.svg" alt="" width={20} height={20} className="w-5 h-5" />
             </li>
-            <li className="home-page-keynotes">
+            <li className="home-page-keynotes text-base leading-6 md:text-lg md:leading-7">
             From Burnout to Belonging: Tapping Into Your Power for Good
             <Image src="/images/arrow_right_blue.svg" alt="" width={20} height={20} className="w-5 h-5" />
             </li>
-            <li className="home-page-keynotes">
+            <li className="home-page-keynotes text-base leading-6 md:text-lg md:leading-7">
             From Grip to Great: Letting Go to Find Your Flow
             <Image src="/images/arrow_right_blue.svg" alt="" width={20} height={20} className="w-5 h-5" />
             </li>
-            <li className="home-page-keynotes mt-[0]">
+            <li className="home-page-keynotes text-base leading-6 md:text-lg md:leading-7 mt-[0]">
             Sovereign Service: Rethinking the Idea of &apos;Service Above Self&apos;
             <Image src="/images/arrow_right_blue.svg" alt="" width={20} height={20} className="w-5 h-5" />
             </li>

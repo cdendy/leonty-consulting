@@ -128,8 +128,8 @@ export default function Nav() {
         ))}
       </nav>
 
-      {/* Desktop “Get in Touch” Button */}
-      <Link href="/contact" className="ml-4">
+      {/* Desktop "Get in Touch" Button */}
+      <Link href="/contact" className="ml-4 hidden md:block">
         <StaggerButton
           textColorClass="text-white"
           bgColorClass="bg-[#0073E5]"
@@ -175,21 +175,23 @@ export default function Nav() {
 
       {/* Mobile Navigation Menu */}
       {isOpen && (
-        <nav className="md:hidden px-4 pt-2 pb-4 space-y-1">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={`block px-3 py-2 rounded-md text-base font-medium ${
-                pathname === link.href
-                  ? "bg-gray-200 text-gray-900"
-                  : "text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-              }`}
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
+        <div className="absolute top-full left-0 right-0 mt-2 mx-6 bg-white rounded-2xl shadow-lg border border-gray-100 md:hidden">
+          <nav className="py-4">
+            {navLinks.map((link, index) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`block px-6 py-3 text-lg font-medium transition-colors ${
+                  pathname === link.href
+                    ? "text-[#0073E5] bg-blue-50"
+                    : "text-gray-800 hover:text-[#0073E5] hover:bg-gray-50"
+                } ${index !== navLinks.length - 1 ? "border-b border-gray-100" : ""}`}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+        </div>
       )}
     </>
   );
