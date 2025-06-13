@@ -40,12 +40,8 @@
     }
 
     .home-lede {
-      color: #8e3030;
-      font-family: 'PolySans-Neutral';
-      font-size: 134px;
-      font-style: normal;
-      line-height: 150px; /* 111.94% */
-    }
+  @apply text-[#8e3030] font-[PolySans-Neutral] text-[60px] md:text-[134px] not-italic leading-[150px];
+}
     .subscribe_header {
       font-family: PolySans-Neutral;
     }
@@ -115,10 +111,7 @@
 }
 
 @media (max-width: 640px) {
-  .home-lede {
-    font-size: 100px;
-    line-height: 112px;
-  }
+
   .stagger-button {
     padding-left: 1rem !important;
     padding-right: 1rem !important;

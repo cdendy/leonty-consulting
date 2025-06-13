@@ -21,8 +21,8 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-black opacity-50 -z-10"></div>
         {/* Content container with relative positioning and higher z-index */}
         <div className="relative z-10 max-w-[1280px] mx-auto grid grid-cols-12 gap-5 pt-0 sm:pt-[127px]">
-          <div className="col-span-10 col-start-2 flex flex-col items-start">
-            <h1 className="home-lede text-white mb-7 leading-[.9] text-[90px]">
+          <div className="col-span-12 md:col-span-10 col-start-1 md:col-start-2 flex flex-col items-start">
+            <h1 className="home-lede text-white mb-7 leading-[.9]">
             Transforming Leaders Who Transform Organizations
             </h1>
             <p className="mt-4 text-lg md:text-2xl text-white">
@@ -36,11 +36,12 @@ export default function HomePage() {
 
       {/* ───────────── ABOUT PREVIEW ───────────── */}
       <section className="fadeSection px-6 mx-auto max-w-340 grid grid-cols-12 gap-5 mb-36">
-      <p className="section-eyebrow col-start-2">About</p>
+    
+    <div className="col-span-12 md:col-span-10 col-start-1 md:col-start-2 mb-20">
+    <p className="section-eyebrow col-start-2">About</p>
       <h2 className="section-heading mt-2 mb-8 col-start-2 col-span-10">
       From Finance Executive to Transformation Leader: The Authentic Path to Sustainable High Performance
       </h2>
-    <div className="col-span-10 col-start-2 mb-20">
       <p className="text-gray-700 text-2xl">
       Erin Leonty transformed her own career trajectory—and then did the same for organizations. Starting in finance as the &quot;only woman in the room,&quot; she learned firsthand how to navigate traditional business environments while staying true to her values. That experience became her foundation for driving inclusion work at companies like Finning International—proving her approach works even in the toughest, most skeptical environments. Later, as VP of Social Purpose at tech company Clio, she achieved what most leaders think is impossible: 31% increase in women&apos;s leadership representation while driving employee engagement up 6x. Her secret? Discovering that authenticity isn&apos;t the opposite of performance—it&apos;s what unlocks it.
       </p>
@@ -50,7 +51,7 @@ export default function HomePage() {
     </div>
   </section>
   <section className="fadeSection px-6 mx-auto max-w-340 grid grid-cols-12 gap-5 mb-36">
-    <div className="col-span-10 col-start-2 mb-10">
+    <div className="col-span-12 md:col-span-10 col-start-1 md:col-start-2 mb-10">
       <p className="section-eyebrow">THE DIFFERENCE</p>
       <h2 className="section-heading mt-2 mb-8">
       What Sets Erin Apart
@@ -95,7 +96,7 @@ export default function HomePage() {
     </div>
   </section>
   <section className="fadeSection px-6 mx-auto max-w-340 grid grid-cols-12 gap-5 mb-36">
-    <div className="col-span-10 col-start-2 mb-10">
+    <div className="col-span-12 md:col-span-10 col-start-1 md:col-start-2 mb-10">
       <p className="section-eyebrow">THE REASON</p>
       <h2 className="section-heading mt-2 mb-8">
       Why Choose Erin
