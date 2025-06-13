@@ -38,29 +38,39 @@ export default function HomePage() {
                 className="btn-watch-erin-icon"
               />
             </button> */}
-            <StaggerButton
-              icon={
-              <img src="/images/play_circle_blue.svg" alt="Play icon" className="h-[20px] w-[20px]" />
-              }
-              >
-              Watch Erin
-            </StaggerButton>
+            <Link href="/keynotes" passHref legacyBehavior>
+  <a style={{ display: 'inline-block' }} tabIndex={-1}>
+    <StaggerButton
+      icon={
+        <img src="/images/play_circle_blue.svg" alt="Play icon" className="h-[20px] w-[20px]" />
+      }
+      type="button"
+    >
+      Watch Erin
+    </StaggerButton>
+  </a>
+</Link>
             {/* <StaggerButton >
               Book Erin to Speak
             </StaggerButton> */}
-            <StaggerButton
-  textColorClass="text-[#0A0D12]"                      // keep or change as needed
-  bgColorClass="bg-[#F3CF4E]"                           // background: #F3CF4E
-  borderColorClass="border-[2px] border-[var(--Gradient-skeuemorphic-gradient-border,rgba(255,255,255,0.12))]"
-  className="
-    rounded-[39px] 
-    shadow-[0px_0px_0px_1px_rgba(10,13,18,0.18)_inset,
-            0px_-2px_0px_rgba(10,13,18,0.05)_inset,
-            0px_1px_2px_rgba(10,13,18,0.05)]
-  "
->
-  Book Erin to Speak
-</StaggerButton>
+            <Link href="/contact" passHref legacyBehavior>
+  <a style={{ display: 'inline-block' }} tabIndex={-1}>
+    <StaggerButton
+      textColorClass="text-[#0A0D12]"                      // keep or change as needed
+      bgColorClass="bg-[#F3CF4E]"                           // background: #F3CF4E
+      borderColorClass="border-[2px] border-[var(--Gradient-skeuemorphic-gradient-border,rgba(255,255,255,0.12))]"
+      className="
+        rounded-[39px] 
+        shadow-[0px_0px_0px_1px_rgba(10,13,18,0.18)_inset,
+                0px_-2px_0px_rgba(10,13,18,0.05)_inset,
+                0px_1px_2px_rgba(10,13,18,0.05)]
+      "
+      type="button"
+    >
+      Book Erin to Speak
+    </StaggerButton>
+  </a>
+</Link>
             </div>
           </div>
         </div> {/* Closing tag for className="relative z-10" */}
