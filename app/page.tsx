@@ -125,22 +125,30 @@ export default function HomePage() {
       </div>
       <div className="col-span-12 md:col-span-6 md:col-start-7">
         <ul className="list-none p-0 m-0 space-y-0 max-w-2xl mx-auto text-gray-700">
-            <li className="home-page-keynotes text-base leading-6 md:text-lg md:leading-7">
-            From Awareness to Action: How to Be an Ally in a Polarized World
-            <Image src="/images/arrow_right_blue.svg" alt="" width={20} height={20} className="w-5 h-5" />
-            </li>
-            <li className="home-page-keynotes text-base leading-6 md:text-lg md:leading-7">
-            From Burnout to Belonging: Tapping Into Your Power for Good
-            <Image src="/images/arrow_right_blue.svg" alt="" width={20} height={20} className="w-5 h-5" />
-            </li>
-            <li className="home-page-keynotes text-base leading-6 md:text-lg md:leading-7">
-            From Grip to Great: Letting Go to Find Your Flow
-            <Image src="/images/arrow_right_blue.svg" alt="" width={20} height={20} className="w-5 h-5" />
-            </li>
-            <li className="home-page-keynotes text-base leading-6 md:text-lg md:leading-7 mt-[0]">
-            Sovereign Service: Rethinking the Idea of &apos;Service Above Self&apos;
-            <Image src="/images/arrow_right_blue.svg" alt="" width={20} height={20} className="w-5 h-5" />
-            </li>
+            <li>
+  <a href="/keynotes#keynote-1" className="home-page-keynotes text-base leading-6 md:text-lg md:leading-7">
+    From Awareness to Action: How to Be an Ally in a Polarized World
+    <Image src="/images/arrow_right_blue.svg" alt="" width={20} height={20} className="w-5 h-5" />
+  </a>
+</li>
+            <li>
+  <a href="/keynotes#keynote-2" className="home-page-keynotes text-base leading-6 md:text-lg md:leading-7">
+    From Burnout to Belonging: Tapping Into Your Power for Good
+    <Image src="/images/arrow_right_blue.svg" alt="" width={20} height={20} className="w-5 h-5" />
+  </a>
+</li>
+            <li>
+  <a href="/keynotes#keynote-3" className="home-page-keynotes text-base leading-6 md:text-lg md:leading-7">
+    From Grip to Great: Letting Go to Find Your Flow
+    <Image src="/images/arrow_right_blue.svg" alt="" width={20} height={20} className="w-5 h-5" />
+  </a>
+</li>
+            <li>
+  <a href="/keynotes#keynote-4" className="home-page-keynotes text-base leading-6 md:text-lg md:leading-7 mt-[0]">
+    Sovereign Service: Rethinking the Idea of &apos;Service Above Self&apos;
+    <Image src="/images/arrow_right_blue.svg" alt="" width={20} height={20} className="w-5 h-5" />
+  </a>
+</li>
         </ul>
       </div>
     </section>

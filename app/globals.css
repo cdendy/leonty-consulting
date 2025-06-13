@@ -219,6 +219,15 @@
   .home-page-keynotes:first-child {
     @apply mt-0;
   }
+
+  .li-link {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: inherit;
+    text-decoration: none;
+  }
   
 }
 /* 1. HEADLINE (h3) inside .keynote-item */
@@ -257,6 +266,11 @@
 .keynote-item .divider {
   @apply mt-8 border-t border-gray-300;
 }
+
+.keynote-item .dividerBottom {
+  @apply mt-8 border-b border-gray-300;
+}
+
 a {
   @apply transition-colors duration-200;
 }

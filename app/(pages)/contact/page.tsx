@@ -1,3 +1,4 @@
+import SubscribeSection from '@/components/SubscribeSection';
 import ContactForm from '../../components/ContactForm'; // Adjusted path
 import type { Metadata } from 'next';
 
@@ -8,36 +9,23 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="container mx-auto px-6 py-16 space-y-20">
+    <div className="space-y-24">
       {/* ───────────── PAGE TITLE ───────────── */}
-      <section className="fadeSection text-center">
-        <h1 className="text-4xl font-bold mb-4">Book Erin Leonty | Contact Leonty Consulting</h1>
-        <p className="text-gray-700">
-          Ready to Transform Your Next Event? Whether you&apos;re planning a leadership conference in Calgary,
-          Erin&apos;s leadership style is focused on helping organizations build cultures where everyone can thrive. across Western Canada,
-          Let&apos;s connect and discuss your goals.Erin can create a transformational experience for your audience.
-        </p>
+      <section className="fadeSection px-6 mx-auto max-w-[1280px] grid grid-cols-12 gap-5 mt-18 mb-36">
+        <div className="col-span-10 col-start-2">
+          <p className="section-eyebrow mb-2">Contact</p>
+          <h1 className="section-heading mb-6">Book Erin Leonty | Contact Leonty Consulting</h1>
+          <p className="text-gray-700 text-xl md:text-2xl">
+            Ready to Transform Your Next Event? Whether you&apos;re planning a leadership conference in Calgary or anywhere across Western Canada, Erin&apos;s leadership style is focused on helping organizations build cultures where everyone can thrive. Let&apos;s connect and discuss your goals—Erin can create a transformational experience for your audience.
+          </p>
+        </div>
       </section>
 
       {/* ───────────── FORM ───────────── */}
-      <section className="fadeSection max-w-lg mx-auto">
-        <ContactForm />
-      </section>
-
-      {/* ───────────── CTA ───────────── */}
-      <section className="fadeSection text-center space-y-4">
-        <p className="text-gray-700">
-          Ready to Get Started? Transform your next event with authentic leadership insights that create lasting change.
-          Whether you&apos;re in Edmonton, Calgary, or anywhere across Western Canada, we&apos;re here to help you create an
-          unforgettable experience for your audience.
-        </p>
-        <p className="text-gray-700">
-  Fill out the form above or email us directly at{' '}
-  <a href="mailto:speaking@leontyconsulting.com" className="text-blue-600 underline">
-    speaking@leontyconsulting.com
-  </a>.
-  She&apos;s available for keynotes, workshops, and executive consulting.
-</p>
+      <section className="fadeSection px-6 mx-auto max-w-[1280px] grid grid-cols-12 gap-5 mb-36">
+        <div className="col-span-10 col-start-2">
+          <ContactForm />
+        </div>
       </section>
     </div>
   );

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, ChangeEvent, FormEvent } from 'react';
+import StaggerButton from './StaggerButton';
 
 interface FormData {
   name: string;
@@ -51,45 +52,49 @@ export default function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6 bg-white p-8 rounded-lg shadow-xl max-w-2xl mx-auto">
-      <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">Get in Touch</h2>
+    <form onSubmit={handleSubmit} className="space-y-8 w-full">
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-          <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Full Name *</label>
-          <input type="text" name="name" id="name" value={formData.name} onChange={handleChange} required className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" />
+          <label htmlFor="name" className="block text-base font-semibold text-gray-600 mb-2 tracking-wide">Full Name *</label>
+          <input type="text" name="name" id="name" value={formData.name} onChange={handleChange} required className="w-full px-4 py-2 border border-gray-300 bg-white rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-900 placeholder-gray-400 transition" />
         </div>
         <div>
-          <label htmlFor="org" className="block text-sm font-medium text-gray-700 mb-1">Organization</label>
-          <input type="text" name="org" id="org" value={formData.org} onChange={handleChange} className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" />
+          <label htmlFor="org" className="block text-base font-semibold text-gray-600 mb-2 tracking-wide">Organization</label>
+          <input type="text" name="org" id="org" value={formData.org} onChange={handleChange} className="w-full px-4 py-2 border border-gray-300 bg-white rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-900 placeholder-gray-400 transition" />
         </div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-          <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email Address *</label>
-          <input type="email" name="email" id="email" value={formData.email} onChange={handleChange} required className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" />
+          <label htmlFor="email" className="block text-base font-semibold text-gray-600 mb-2 tracking-wide">Email Address *</label>
+          <input type="email" name="email" id="email" value={formData.email} onChange={handleChange} required className="w-full px-4 py-2 border border-gray-300 bg-white rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-900 placeholder-gray-400 transition" />
         </div>
         <div>
-          <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
-          <input type="tel" name="phone" id="phone" value={formData.phone} onChange={handleChange} className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" />
+          <label htmlFor="phone" className="block text-base font-semibold text-gray-600 mb-2 tracking-wide">Phone Number</label>
+          <input type="tel" name="phone" id="phone" value={formData.phone} onChange={handleChange} className="w-full px-4 py-2 border border-gray-300 bg-white rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-900 placeholder-gray-400 transition" />
         </div>
       </div>
 
       <div>
-        <label htmlFor="date" className="block text-sm font-medium text-gray-700 mb-1">Preferred Event Date (if applicable)</label>
-        <input type="date" name="date" id="date" value={formData.date} onChange={handleChange} className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" />
+        <label htmlFor="date" className="block text-base font-semibold text-gray-600 mb-2 tracking-wide">Preferred Event Date (if applicable)</label>
+        <input type="date" name="date" id="date" value={formData.date} onChange={handleChange} className="w-full px-4 py-2 border border-gray-300 bg-white rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-900 placeholder-gray-400 transition" />
       </div>
 
       <div>
-        <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message / Inquiry *</label>
-        <textarea name="message" id="message" value={formData.message} onChange={handleChange} rows={5} required className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"></textarea>
+        <label htmlFor="message" className="block text-sm font-medium text-gray-500 mb-2 tracking-wide">Message / Inquiry *</label>
+        <textarea name="message" id="message" value={formData.message} onChange={handleChange} rows={5} required className="w-full px-4 py-2 border border-gray-200 bg-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-900 placeholder-gray-400 transition"></textarea>
       </div>
 
-      <div className="text-center">
-        <button type="submit" className="w-full md:w-auto bg-blue-700 hover:bg-blue-800 text-white font-semibold py-3 px-10 rounded-lg transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
-          Send Message
-        </button>
+      <div>
+        <StaggerButton
+            type="submit"
+            className="w-full md:w-auto font-bold py-3 px-10 transition focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 tracking-wide text-lg"
+            bgColorClass="bg-blue-500 hover:bg-blue-600"
+            textColorClass="text-white"
+          >
+            Send Message
+          </StaggerButton>
       </div>
 
       {status && (
