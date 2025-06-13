@@ -188,7 +188,7 @@ export default function HomePage() {
           <span>04</span>
 
           {/* Headline */}
-          <h3>Sovereign Service: Rethinking the Idea of 'Service Above Self'</h3>
+          <h3>Sovereign Service: Rethinking the Idea of &#39;Service Above Self&#39;</h3>
 
           {/* First paragraph */}
           <p>
