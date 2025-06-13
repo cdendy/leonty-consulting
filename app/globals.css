@@ -212,6 +212,11 @@
     font-family: 'PolySans-Neutral';
   }
 
+  .section-eyebrow-reverse {
+    @apply text-[20px] leading-[20.8px] font-semibold uppercase tracking-[-0.8px] text-[#0073E5];
+    font-family: 'PolySans-Neutral';
+  }
+
   .home-page-keynotes {
     @apply flex items-center justify-between gap-[148px] border-b border-[#DFE7ED] pb-[10px] pt-3 px-[16px] my-3 mb-0 
            text-gray-900 text-[24px] leading-normal font-semibold tracking-[0.48px] font-[PolySans] transition-colors duration-400 ease-in-out hover:bg-gray-100;

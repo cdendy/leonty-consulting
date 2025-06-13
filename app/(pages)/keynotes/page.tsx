@@ -7,20 +7,19 @@ import WatchErin from '../../components/WatchErin';
 export default function HomePage() {
   return (
 <div className="space-y-24">
-
-    <main className="px-6 mx-auto max-w-[1360px] grid grid-cols-12 gap-5 mt-18 mb-25">
-      <div className="col-span-10 col-start-2 mb-10">
+<main className="grid grid-cols-12 gap-5 px-6 mx-auto max-w-[1360px] mt-[72px] mb-[100px]">
+  <div className="col-span-12 md:col-span-10 md:col-start-2 mb-10">
         {/* 
           → Because we did NOT pass a `height` prop, 
             useAspectRatio={true} is in effect by default, 
             so it will force a 16:9 box. 
         */}
-        <WatchErin videoUrl="https://www.youtube.com/watch?v=NFsFgerTO6E" />
+        <WatchErin videoUrl="https://www.youtube.com/watch?v=18uDutylDa4" />
       </div>
     </main>
-  <section className="fadeSection px-6 mx-auto max-w-340 grid grid-cols-12 gap-5 mb-25">
-    <div className="col-span-10 col-start-2 mb-10">
-      <p className="section-eyebrow">Keynote Speaking</p>
+  <section className="fadeSection keynote-item px-6 mx-auto max-w-340 grid grid-cols-12 gap-5 mb-25">
+    <div className="col-span-12 col-start-1 md:col-span-10 md:col-start-2 mb-10">
+      <h6 className="section-eyebrow-reverse">Keynote Speakings</h6>
       <h2 className="section-heading mt-2 mb-8">
       Leadership Transformation That Sticks
       </h2>
@@ -188,7 +187,7 @@ export default function HomePage() {
           <span>04</span>
 
           {/* Headline */}
-          <h3>Sovereign Service: Rethinking the Idea of &#39;Service Above Self&#39;</h3>
+          <h3>Sovereign Service: Rethinking the Idea of &lsquo;Service Above Self&rsquo;</h3>
 
           {/* First paragraph */}
           <p>

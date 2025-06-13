@@ -58,6 +58,24 @@ const getEmbedUrl = (urlString: string, autoplay: boolean): string => {
   }
 };
 
+function getYoutubeThumbnail(urlString: string): string {
+  try {
+    const url = new URL(urlString);
+    let videoId = "";
+    if (url.hostname.includes("youtu.be")) {
+      videoId = url.pathname.slice(1);
+    } else if (url.searchParams.has("v")) {
+      videoId = url.searchParams.get("v") || "";
+    } else if (url.pathname.includes("/embed/")) {
+      videoId = url.pathname.split("/embed/")[1];
+    }
+    if (!videoId) return "";
+    return `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+  } catch {
+    return "";
+  }
+}
+
 export default function WatchVideo({
   videoUrl,
   width = "100%",
@@ -100,17 +118,25 @@ export default function WatchVideo({
 
         {/* Overlay only shows when isPlaying === false */}
         {!isPlaying && (
-          <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center">
-            <h2 className="text-white text-2xl md:text-3xl font-bold mb-4">
-              Watch Video
-            </h2>
-            <button
-              aria-label="Play video"
-              className="bg-white rounded-full p-4 shadow-lg hover:bg-gray-100 focus:outline-none"
-              onClick={() => setIsPlaying(true)}
-            >
-              <FaPlay className="text-lg text-black" />
-            </button>
+          <div className="absolute inset-0 flex flex-col items-center justify-center">
+            <img
+              src={getYoutubeThumbnail(videoUrl)}
+              alt="Video poster frame"
+              className="absolute inset-0 w-full h-full object-cover rounded-lg"
+              style={{ zIndex: 0 }}
+            />
+            <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center" style={{ zIndex: 1 }}>
+              <h2 className="text-white text-2xl md:text-3xl font-bold mb-4">
+                Watch Video
+              </h2>
+              <button
+                aria-label="Play video"
+                className="bg-white rounded-full p-4 shadow-lg hover:bg-gray-100 focus:outline-none"
+                onClick={() => setIsPlaying(true)}
+              >
+                <FaPlay className="text-lg text-black" />
+              </button>
+            </div>
           </div>
         )}
       </div>
