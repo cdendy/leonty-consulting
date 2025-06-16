@@ -16,7 +16,7 @@ export default function ContactPage() {
           <p className="section-eyebrow mb-2">Contact</p>
           <h1 className="section-heading mb-6">Book Erin Leonty | Contact Leonty Consulting</h1>
           <p className="text-gray-700 text-xl md:text-2xl">
-            Ready to Transform Your Next Event? Whether you&apos;re planning a leadership conference in Calgary or anywhere across Western Canada, Erin&apos;s leadership style is focused on helping organizations build cultures where everyone can thrive. Let&apos;s connect and discuss your goals—Erin can create a transformational experience for your audience.
+            Ready to Transform Your Next Event? Whether you&apos;re planning a leadership conference in Edmonton, Calgary or anywhere across Western Canada, Erin&apos;s leadership style is focused on helping organizations build cultures where everyone can thrive. Let&apos;s connect and discuss your goals—Erin can create a transformational experience for your audience.
           </p>
         </div>
       </section>
