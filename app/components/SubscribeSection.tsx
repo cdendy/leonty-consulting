@@ -10,7 +10,7 @@ export default function SubscribeSection() {
         {/* Left column – headline and subtext */}
         <div>
           <h2 className="text-white text-[22px] leading-[28px] font-bold subscribe_header sm:text-[28px] sm:leading-[36px]">
-            Join 2,000+ subscribers
+            Join our community of subscribers
           </h2>
           <p className="text-white text-[16px] leading-[24px] mt-2 sm:text-[18px] sm:leading-[28px]">
             Stay in the loop with everything you need to know.
